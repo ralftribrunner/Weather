@@ -1,0 +1,14 @@
+A program elkezdésekor egy kisebb nehézséget jelentett, hogy egy weboldalról
+kérjem le az adatokat, mivel korábban nem csináltam ilyet. Ez még könnyen 
+is sikerült egy stackoverflow-s kód segítségével, viszont a program mindig 
+leállt. A debugger viszont kimutatta a hiba okát és egy kis utánanézés során
+kiderült, hogy http helyett https-t kellett írni.
+
+Ezután még az okozott hibát, hogy nem jelentek meg a városok a képernyõn, 
+holott a listában már benne voltak. Kiderítettem,hogy a probléma az volt, 
+hogy kellett egy kis idõ, mire lekéri az összes város adatait. 
+Ezt AsyncTask-al oldottam meg, ami folyamatosan jelzi, 
+hogy hogy áll a betöltés, és ha kész, akkor frissíti az UI-t a városokkal.
+
+A filter lekódolása is újdonság volt, viszont ezt egy stackoverflow-s kóddal
+könnyen sikerült megcsinálni.
